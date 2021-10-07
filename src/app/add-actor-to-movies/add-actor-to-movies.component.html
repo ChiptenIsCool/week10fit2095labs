@@ -1,0 +1,36 @@
+
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Select</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of actors">
+        
+        <td>{{item.name}}</td>
+        <td><button type="submit" class="btn btn-primary" (click)="onBooleanActor(item)">Select</button></td>
+      </tr>
+    </tbody>
+    </table>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Select</th>
+        </tr>
+    </thead>
+        <tbody>
+        <tr *ngFor="let item of movies">
+          <td>{{item.title}}</td>
+          <td>{{item.year}}</td>
+          <td><button type="submit" class="btn btn-primary" (click)="onBooleanMovie(item)">Select</button></td>
+        </tr>
+    </tbody>
+    </table>
+    <div>
+        <button type="submit" class="btn btn-primary" (click)="onPuttingActorIntoMovie()">Add Actor to Movie</button>
+    </div>

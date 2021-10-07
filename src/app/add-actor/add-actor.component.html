@@ -1,0 +1,40 @@
+<div class="form-group">
+    <label>Actor Name</label>
+    <input type="text" class="form-control" [(ngModel)]="actorName">
+    <label>Actor Year</label>
+    <input type="text" class="form-control" [(ngModel)]="actorYear">
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="onAddActor()">Save Actor</button>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Year</th>
+        <th>Age</th>
+        <th>Update</th>
+        <th>Delete?</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let item of actors">
+        <td>{{item.name}}</td>
+        <td>{{item.year}}</td>
+        <td>{{item.year| week10 }}</td>
+        <td><button type="submit" class="btn btn-primary" (click)="onSelectUpdate(item)">Update?</button></td>
+        <td><button type="submit" class="btn btn-primary" (click)="onDeleteActor(item)">Delete</button></td>
+
+      </tr>
+  </tbody>
+  </table>
+  <div class="form-group" *ngIf="updateboolean == true">
+    <h1>Update: '{{actorName}}'</h1>
+    <label>Update Name</label>
+    <input type="text" class="form-control" [(ngModel)]="actorName">
+    <label>Update Year</label>
+    <input type="text" class="form-control" [(ngModel)]="actorYear">
+    <button type="submit" class="btn btn-primary" (click)="onUpdateActor()">Update Actor</button>
+  </div>
+  

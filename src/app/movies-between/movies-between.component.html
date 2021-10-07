@@ -1,0 +1,34 @@
+
+ <div class="form-group">
+  <label>Year1</label>
+  <input type="text" class="form-control" [(ngModel)]="year1">
+</div>
+<div class="form-group">
+  <label>Year 2</label>
+  <input type="text" class="form-control" [(ngModel)]="year2">
+</div>
+
+<!-- <button type="submit" class="btn btn-primary" (click)="onGetBetween()">Get</button> -->
+
+
+
+  <div class="section">
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Year</th>
+  <!--       <th>Actors</th> -->
+      </tr>
+      <tr *ngFor="let item of movies">
+        <ng-container *ngIf="item.year >= year1">
+          <ng-container *ngIf="item.year <= year2">
+            <td>{{item.title}}</td>
+            <td>{{item.year}}</td>
+          </ng-container>
+      </ng-container>
+      
+      
+    </table>
+  </div>
+
+ 

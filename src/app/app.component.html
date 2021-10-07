@@ -1,0 +1,137 @@
+<!-- 
+App Component
+
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" href="#" (click)="changeSection(1)">Home Page</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="changeSection(2)">Add Movies</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="changeSection(3)">Delete Movies</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="changeSection(4)">Delete Movies Between</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="changeSection(5)">Delete Movies Title</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="changeSection(6)">Add Actor</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="changeSection(7)">Add Actor To Movies</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="changeSection(8)">list 2000 2010</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="changeSection(9)">list 2000 2010</a>
+  </li>
+</ul>
+
+<div class="card" *ngIf="section == 1">
+  <div class="card-body">
+    Section 1
+    <app-list-movies></app-list-movies>
+    
+  </div>
+</div>
+
+<div class="card" *ngIf="section == 2">
+  <div class="card-body">
+    Section 2
+    
+    <app-add-movies></app-add-movies>
+  </div>
+</div>
+<div class="card" *ngIf="section == 3">
+  <div class="card-body">
+    Section 3
+    <app-delete-movies></app-delete-movies>
+    
+  </div>
+</div>
+
+<div class="card" *ngIf="section == 4">
+  <div class="card-body">
+    Section 4
+    <app-delete-between></app-delete-between>
+    
+  </div>
+</div>
+<div class="card" *ngIf="section == 5">
+  <div class="card-body">
+    Section 5
+    <app-delete-movie-title></app-delete-movie-title>
+    
+  </div>
+</div>
+
+<div class="card" *ngIf="section == 6">
+  <div class="card-body">
+    Section 6
+    <app-add-actor></app-add-actor>
+    
+  </div>
+</div>
+
+<div class="card" *ngIf="section == 7">
+  <div class="card-body">
+    Section 7
+    <app-add-actor-to-movies></app-add-actor-to-movies>
+    
+  </div>
+</div>
+
+<div class="card" *ngIf="section == 8">
+  <div class="card-body">
+    Section 8
+    <app-movies-between></app-movies-between>
+    
+  </div>
+</div>
+
+<div class="card" *ngIf="section == 9">
+  <div class="card-body">
+    Section 9
+    
+    
+  </div>
+</div>
+
+ -->
+
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/list-movies" routerLinkActive="active">List </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/add-movies" routerLinkActive="active">Add Movies</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/add-actor" routerLinkActive="active">Add Actor</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/add-actor-to-movies" routerLinkActive="active">Add Actor to Movies</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/delete-movies" routerLinkActive="active">Delete Movies</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/delete-movies-between" routerLinkActive="active">Delete Movies Between</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/delete-movies-title" routerLinkActive="active">Delete Movies by Title</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/list-movies-between" routerLinkActive="active">List Movies Between</a>
+      </li>
+
+    
+      
+  </ul>
+</nav>
+<router-outlet></router-outlet>
